@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!-- ~ Create by SangKwon on 2019. 7. 5. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="md.winitech.com">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".bindAPI.BindActivity" />
+        <activity android:name=".bindAPI.base.commomActivity" />
+        <activity android:name=".bindAPI.ObjectActivity" />
+        <activity android:name=".butterKnife.ButterActivity"></activity>
+    </application>
+
+</manifest>

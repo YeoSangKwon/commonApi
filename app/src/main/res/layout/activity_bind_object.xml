@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by SangKwon on 2019. 7. 8.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <!-- 함수바인딩을 위한 변수 -->
+        <variable name="activity" type="md.winitech.com.bindAPI.ObjectActivity" />
+
+        <!-- object로 받을 변수 -->
+        <variable name="user" type="md.winitech.com.bindAPI.data.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.firstName}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.lastName}"/>
+    </LinearLayout>
+
+</layout>
