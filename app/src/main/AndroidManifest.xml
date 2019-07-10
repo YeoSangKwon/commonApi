@@ -3,6 +3,7 @@
     package="md.winitech.com">
 
     <application
+        android:name=".apiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +20,8 @@
         <activity android:name=".bindAPI.BindActivity" />
         <activity android:name=".bindAPI.base.commomActivity" />
         <activity android:name=".bindAPI.ObjectActivity" />
-        <activity android:name=".butterKnife.ButterActivity"></activity>
+        <activity android:name=".butterKnife.ButterActivity" />
+        <activity android:name=".Realm.RealmActivity"></activity>
     </application>
 
 </manifest>

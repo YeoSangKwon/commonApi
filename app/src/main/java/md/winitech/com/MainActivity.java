@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import md.winitech.com.Realm.RealmActivity;
 import md.winitech.com.bindAPI.BindActivity;
 import md.winitech.com.bindAPI.ObjectActivity;
 import md.winitech.com.butterKnife.ButterActivity;
@@ -43,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
                 mIntent = new Intent(this, ButterActivity.class);
                 startActivity(mIntent);
                 break;
+            case R.id.btn_4:
+                mIntent = new Intent(this, RealmActivity.class);
+                startActivity(mIntent);
+                break;
+
         }
 
     }
