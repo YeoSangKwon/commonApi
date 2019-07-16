@@ -13,10 +13,10 @@ package md.winitech.com.bindAPI;
 import android.os.Bundle;
 
 import md.winitech.com.R;
-import md.winitech.com.bindAPI.base.commomActivity;
+import md.winitech.com.bindAPI.base.commActivity;
 import md.winitech.com.databinding.ActivityBindBinding;
 
-public class BindActivity extends commomActivity<ActivityBindBinding> {
+public class BindActivity extends commActivity<ActivityBindBinding> {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

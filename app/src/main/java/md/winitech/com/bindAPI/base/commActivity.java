@@ -18,7 +18,7 @@ import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class commomActivity  <T extends ViewDataBinding> extends AppCompatActivity {
+public class commActivity<T extends ViewDataBinding> extends AppCompatActivity {
 
     private T vb;
 

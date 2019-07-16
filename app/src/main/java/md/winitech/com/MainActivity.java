@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import md.winitech.com.Lamda.LamdaActivity;
 import md.winitech.com.Realm.RealmActivity;
 import md.winitech.com.bindAPI.BindActivity;
 import md.winitech.com.bindAPI.ObjectActivity;
@@ -48,7 +49,10 @@ public class MainActivity extends AppCompatActivity {
                 mIntent = new Intent(this, RealmActivity.class);
                 startActivity(mIntent);
                 break;
-
+            case R.id.btn_5:
+                mIntent = new Intent(this, LamdaActivity.class);
+                startActivity(mIntent);
+                break;
         }
 
     }
