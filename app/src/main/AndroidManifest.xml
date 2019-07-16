@@ -22,7 +22,9 @@
         <activity android:name=".bindAPI.ObjectActivity" />
         <activity android:name=".butterKnife.ButterActivity" />
         <activity android:name=".Realm.RealmActivity" />
-        <activity android:name=".Lamda.LamdaActivity"></activity>
+        <activity android:name=".Lamda.LamdaActivity" />
+        <activity android:name=".Parcelable.ParcelableActivity" />
+        <activity android:name=".Parcelable.GetActivity"></activity>
     </application>
 
 </manifest>

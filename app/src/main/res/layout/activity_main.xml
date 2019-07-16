@@ -60,6 +60,13 @@
             android:layout_height="wrap_content"
             android:text="@string/JavaLamda"
             android:onClick="@{activity::onClickButton}" />
+
+        <Button
+            android:id="@+id/btn_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Parcelable"
+            android:onClick="@{activity::onClickButton}" />
     </LinearLayout>
 
 </layout>

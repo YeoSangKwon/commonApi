@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import md.winitech.com.Lamda.LamdaActivity;
+import md.winitech.com.Parcelable.ParcelableActivity;
 import md.winitech.com.Realm.RealmActivity;
 import md.winitech.com.bindAPI.BindActivity;
 import md.winitech.com.bindAPI.ObjectActivity;
@@ -51,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_5:
                 mIntent = new Intent(this, LamdaActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_6:
+                mIntent = new Intent(this, ParcelableActivity.class);
                 startActivity(mIntent);
                 break;
         }
