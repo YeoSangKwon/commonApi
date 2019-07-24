@@ -15,8 +15,12 @@ import md.winitech.com.Parcelable.ParcelableActivity;
 import md.winitech.com.Realm.RealmActivity;
 import md.winitech.com.bindAPI.BindActivity;
 import md.winitech.com.bindAPI.ObjectActivity;
+import md.winitech.com.broadCast.BroadcastActivity;
 import md.winitech.com.butterKnife.ButterActivity;
 import md.winitech.com.databinding.ActivityMainBinding;
+import md.winitech.com.pattern.ListActivity;
+import md.winitech.com.pattern.patternActivity;
+import md.winitech.com.recycler.recyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setActivity(this);
         binding.txtMain.setText("Main Activity");
+
+        /**
+         * XML Broadcast Receiver
+         * */
+        this.sendBroadcast(new Intent("md.winitech.com.Broadcast.test"));
     }
 
 
@@ -56,6 +65,22 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_6:
                 mIntent = new Intent(this, ParcelableActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_7:
+                mIntent = new Intent(this, BroadcastActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_8:
+                mIntent = new Intent(this, recyclerActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_9:
+                mIntent = new Intent(this, patternActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_10:
+                mIntent = new Intent(this, ListActivity.class);
                 startActivity(mIntent);
                 break;
         }

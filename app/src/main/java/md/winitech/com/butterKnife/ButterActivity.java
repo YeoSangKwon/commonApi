@@ -76,7 +76,9 @@ public class ButterActivity extends AppCompatActivity implements ButterFragmentA
     public void onClickFragment(View view){
         //Activity -> Fragment 함수 호출 (ID 또는 TAG를 이용해서 호출 가능하다)
         ButterFragmentA a = (ButterFragmentA)getSupportFragmentManager().findFragmentByTag("TagA");
-        a.showToast(this, "Main Activity Call Function");
+        if(null != a){
+            a.showToast(this, "Main Activity Call Function");
+        }
     }
 
 

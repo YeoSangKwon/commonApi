@@ -8,6 +8,10 @@
     <string name="RealmDataBase">Realm DB</string>
     <string name="JavaLamda">Lamda code</string>
     <string name="Parcelable">Parcelable intent</string>
+    <string name="Broadcast">Broadcast receiver</string>
+    <string name="recyclerView">recycler view</string>
+    <string name="mvvmActivity">MVVM</string>
+    <string name="mvvmListActivity">MVVM List</string>
 
     <!-- Butter Knife Button -->
     <string name="fragment_1">1 View</string>

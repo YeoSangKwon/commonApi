@@ -67,6 +67,34 @@
             android:layout_height="wrap_content"
             android:text="@string/Parcelable"
             android:onClick="@{activity::onClickButton}" />
+
+        <Button
+            android:id="@+id/btn_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Broadcast"
+            android:onClick="@{activity::onClickButton}" />
+
+        <Button
+            android:id="@+id/btn_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recyclerView"
+            android:onClick="@{activity::onClickButton}" />
+
+        <Button
+            android:id="@+id/btn_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mvvmActivity"
+            android:onClick="@{activity::onClickButton}" />
+
+        <Button
+            android:id="@+id/btn_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mvvmListActivity"
+            android:onClick="@{activity::onClickButton}" />
     </LinearLayout>
 
 </layout>

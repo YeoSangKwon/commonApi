@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><!-- ~ Create by SangKwon on 2019. 7. 5. -->
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="md.winitech.com">
 
     <application
@@ -9,7 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".pattern.ListActivity"></activity>
+        <activity android:name=".pattern.patternActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +28,17 @@
         <activity android:name=".Realm.RealmActivity" />
         <activity android:name=".Lamda.LamdaActivity" />
         <activity android:name=".Parcelable.ParcelableActivity" />
-        <activity android:name=".Parcelable.GetActivity"></activity>
+        <activity android:name=".Parcelable.GetActivity" />
+
+        <!-- com.BroadCast.receiver -->
+        <receiver android:name=".broadCast.receiver.XmlBroadCastReceiver">
+            <intent-filter>
+                <action android:name="md.winitech.com.Broadcast.test" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".broadCast.BroadcastActivity" />
+        <activity android:name=".recycler.recyclerActivity" />
     </application>
 
 </manifest>
