@@ -1,0 +1,22 @@
+
+[패키지 소개]
+ = 패키지는 중간중간 추가로 인해 넘버링이 달라질 수 있음 (최초생성 2019-07-25)
+
+ 1. bindAPI : 데이터 바인딩 모델링
+
+ 2. broadCast : 브로드 캐스트
+
+ 3. butterKnife : 버터나이프 모델링
+
+ 4. Capture : 화면캡쳐
+
+ 5. Lamda : 기본 람다식
+
+ 6. Parcelable : 오브젝트를 intent로 넘기기
+
+ 7. pattern : Model-View-ViewModel 패턴
+
+ 8. Realm : 리얼m 디비사용 (구현중)
+
+ 9. recycler : 리싸이클러뷰 구현
+

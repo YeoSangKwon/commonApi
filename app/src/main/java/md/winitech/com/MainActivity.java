@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import md.winitech.com.Capture.CaptureActivity;
 import md.winitech.com.Lamda.LamdaActivity;
 import md.winitech.com.Parcelable.ParcelableActivity;
 import md.winitech.com.Realm.RealmActivity;
@@ -83,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
                 mIntent = new Intent(this, ListActivity.class);
                 startActivity(mIntent);
                 break;
+            case R.id.btn_11:
+                mIntent = new Intent(this, CaptureActivity.class);
+                startActivity(mIntent);
+                break;
+
         }
 
     }
