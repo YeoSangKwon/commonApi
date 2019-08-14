@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="md.winitech.com">
+    package="md.ysk5898.com">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".apiApplication"
+        android:name="md.ysk5898.com.apiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,41 +15,41 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".retrofit.view.RetrofitActivity"></activity>
+        <activity android:name="md.ysk5898.com.retrofit.view.RetrofitActivity"></activity>
         <activity
-            android:name=".opensource.openSourceActivity"
+            android:name="md.ysk5898.com.opensource.openSourceActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".generic.GenericActivity" />
-        <activity android:name=".capture.CaptureActivity" />
-        <activity android:name=".pattern.ListActivity" />
-        <activity android:name=".pattern.patternActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="md.ysk5898.com.generic.GenericActivity" />
+        <activity android:name="md.ysk5898.com.capture.CaptureActivity" />
+        <activity android:name="md.ysk5898.com.pattern.ListActivity" />
+        <activity android:name="md.ysk5898.com.pattern.patternActivity" />
+        <activity android:name="md.ysk5898.com.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".bindAPI.BindActivity" />
-        <activity android:name=".bindAPI.base.commActivity" />
-        <activity android:name=".bindAPI.ObjectActivity" />
-        <activity android:name=".butterKnife.ButterActivity" />
-        <activity android:name=".realm.RealmActivity" />
-        <activity android:name=".lamda.LamdaActivity" />
-        <activity android:name=".parcelable.ParcelableActivity" />
-        <activity android:name=".parcelable.GetActivity" /> <!-- com.BroadCast.receiver -->
-        <receiver android:name=".broadCast.receiver.XmlBroadCastReceiver">
+        <activity android:name="md.ysk5898.com.bindAPI.BindActivity" />
+        <activity android:name="md.ysk5898.com.bindAPI.base.commActivity" />
+        <activity android:name="md.ysk5898.com.bindAPI.ObjectActivity" />
+        <activity android:name="md.ysk5898.com.butterKnife.ButterActivity" />
+        <activity android:name="md.ysk5898.com.realm.RealmActivity" />
+        <activity android:name="md.ysk5898.com.lamda.LamdaActivity" />
+        <activity android:name="md.ysk5898.com.parcelable.ParcelableActivity" />
+        <activity android:name="md.ysk5898.com.parcelable.GetActivity" /> <!-- com.BroadCast.receiver -->
+        <receiver android:name="md.ysk5898.com.broadCast.receiver.XmlBroadCastReceiver">
             <intent-filter>
-                <action android:name="md.winitech.com.Broadcast.test" />
+                <action android:name="md.ysk5898.com.Broadcast.test" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".broadCast.BroadcastActivity" />
-        <activity android:name=".recycler.recyclerActivity" /> <!-- foregroundService -->
-        <activity android:name=".service.ServiceActivity" />
+        <activity android:name="md.ysk5898.com.broadCast.BroadcastActivity" />
+        <activity android:name="md.ysk5898.com.recycler.recyclerActivity" /> <!-- foregroundService -->
+        <activity android:name="md.ysk5898.com.service.ServiceActivity" />
 
         <service
-            android:name=".service.reqService"
+            android:name="md.ysk5898.com.service.reqService"
             android:enabled="true"
             android:exported="true" />
     </application>

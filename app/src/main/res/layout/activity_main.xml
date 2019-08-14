@@ -9,7 +9,7 @@
 
         <variable
             name="activity"
-            type="md.winitech.com.MainActivity" />
+            type="md.ysk5898.com.MainActivity" />
     </data>
 
     <ScrollView

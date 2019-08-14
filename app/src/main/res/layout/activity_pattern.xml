@@ -6,11 +6,11 @@
     <data>
         <variable
             name="model"
-            type="md.winitech.com.pattern.viewmodel.MainViewModel" />
+            type="md.ysk5898.com.pattern.viewmodel.MainViewModel" />
 
         <variable
             name="input"
-            type="md.winitech.com.pattern.viewmodel.InputViewModel" />
+            type="md.ysk5898.com.pattern.viewmodel.InputViewModel" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

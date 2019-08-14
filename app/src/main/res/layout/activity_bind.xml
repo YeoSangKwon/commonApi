@@ -8,7 +8,7 @@
 
         <variable
             name="activity"
-            type="md.winitech.com.bindAPI.BindActivity" />
+            type="md.ysk5898.com.bindAPI.BindActivity" />
     </data>
 
     <LinearLayout

@@ -8,7 +8,7 @@
     <data>
         <variable
             name="activity"
-            type="md.winitech.com.service.ServiceActivity" />
+            type="md.ysk5898.com.service.ServiceActivity" />
     </data>
 
     <LinearLayout

@@ -7,10 +7,10 @@
     <data>
 
         <!-- 함수바인딩을 위한 변수 -->
-        <variable name="activity" type="md.winitech.com.bindAPI.ObjectActivity" />
+        <variable name="activity" type="md.ysk5898.com.bindAPI.ObjectActivity" />
 
         <!-- object로 받을 변수 -->
-        <variable name="user" type="md.winitech.com.bindAPI.data.User" />
+        <variable name="user" type="md.ysk5898.com.bindAPI.data.User" />
     </data>
 
     <LinearLayout
