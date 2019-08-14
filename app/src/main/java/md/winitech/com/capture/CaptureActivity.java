@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 25.
  */
 
-package md.winitech.com.Capture;
+package md.winitech.com.capture;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +13,7 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import md.winitech.com.Capture.comm.bitmapMaker;
-import md.winitech.com.Capture.comm.captureFunction;
+import md.winitech.com.capture.comm.captureFunction;
 import md.winitech.com.R;
 
 public class CaptureActivity extends AppCompatActivity {

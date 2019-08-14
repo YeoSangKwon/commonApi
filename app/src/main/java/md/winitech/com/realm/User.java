@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 8.
  */
 
-package md.winitech.com.Realm;
+package md.winitech.com.realm;
 
 
 import io.realm.RealmObject;

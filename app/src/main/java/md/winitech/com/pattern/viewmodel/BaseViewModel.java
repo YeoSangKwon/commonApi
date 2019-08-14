@@ -10,7 +10,7 @@
  * Create by SangKwon on 2019. 7. 17.
  */
 
-package md.winitech.com.pattern.viewModel;
+package md.winitech.com.pattern.viewmodel;
 
 public interface BaseViewModel {
     void onCreate();

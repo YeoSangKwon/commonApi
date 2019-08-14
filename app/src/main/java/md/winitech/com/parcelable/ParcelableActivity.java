@@ -5,12 +5,11 @@
  * 해당 객체를 직렬화 및 복원 해줌
  */
 
-package md.winitech.com.Parcelable;
+package md.winitech.com.parcelable;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,7 +17,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import md.winitech.com.R;
 
 public class ParcelableActivity extends AppCompatActivity {

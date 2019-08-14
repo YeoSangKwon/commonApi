@@ -2,20 +2,16 @@
  * Create by SangKwon on 2019. 7. 8.
  */
 
-package md.winitech.com.Realm;
+package md.winitech.com.realm;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import java.util.UUID;
-
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
-import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
-import io.realm.annotations.PrimaryKey;
 import md.winitech.com.R;
 import md.winitech.com.apiApplication;
 

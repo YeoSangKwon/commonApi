@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 17.
  */
 
-package md.winitech.com.pattern.viewModel;
+package md.winitech.com.pattern.viewmodel;
 
 import android.databinding.ObservableField;
 import android.view.View;

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create by SangKwon on 2019. 7. 25.
+  -->
+
+<resources>
+    <dimen name="edt_Margin">8dp</dimen>
+</resources>

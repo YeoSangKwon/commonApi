@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 16.
  */
 
-package md.winitech.com.Parcelable;
+package md.winitech.com.parcelable;
 
 import android.os.Parcel;
 import android.os.Parcelable;

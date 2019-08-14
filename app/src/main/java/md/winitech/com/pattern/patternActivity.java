@@ -10,8 +10,8 @@ import android.os.Bundle;
 
 import md.winitech.com.R;
 import md.winitech.com.databinding.ActivityPatternBinding;
-import md.winitech.com.pattern.viewModel.InputViewModel;
-import md.winitech.com.pattern.viewModel.MainViewModel;
+import md.winitech.com.pattern.viewmodel.InputViewModel;
+import md.winitech.com.pattern.viewmodel.MainViewModel;
 
 public class patternActivity extends AppCompatActivity {
     MainViewModel model = new MainViewModel();

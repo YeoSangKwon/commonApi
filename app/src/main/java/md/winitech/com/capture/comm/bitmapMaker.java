@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 25.
  */
 
-package md.winitech.com.Capture.comm;
+package md.winitech.com.capture.comm;
 
 import android.app.Activity;
 import android.graphics.Bitmap;

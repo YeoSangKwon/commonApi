@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="md.winitech.com">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name=".apiApplication"
         android:allowBackup="true"
@@ -12,7 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".pattern.ListActivity"></activity>
+        <activity android:name=".retrofit.view.RetrofitActivity"></activity>
+        <activity
+            android:name=".opensource.openSourceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".generic.GenericActivity" />
+        <activity android:name=".capture.CaptureActivity" />
+        <activity android:name=".pattern.ListActivity" />
         <activity android:name=".pattern.patternActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -25,12 +34,10 @@
         <activity android:name=".bindAPI.base.commActivity" />
         <activity android:name=".bindAPI.ObjectActivity" />
         <activity android:name=".butterKnife.ButterActivity" />
-        <activity android:name=".Realm.RealmActivity" />
-        <activity android:name=".Lamda.LamdaActivity" />
-        <activity android:name=".Parcelable.ParcelableActivity" />
-        <activity android:name=".Parcelable.GetActivity" />
-
-        <!-- com.BroadCast.receiver -->
+        <activity android:name=".realm.RealmActivity" />
+        <activity android:name=".lamda.LamdaActivity" />
+        <activity android:name=".parcelable.ParcelableActivity" />
+        <activity android:name=".parcelable.GetActivity" /> <!-- com.BroadCast.receiver -->
         <receiver android:name=".broadCast.receiver.XmlBroadCastReceiver">
             <intent-filter>
                 <action android:name="md.winitech.com.Broadcast.test" />
@@ -38,7 +45,13 @@
         </receiver>
 
         <activity android:name=".broadCast.BroadcastActivity" />
-        <activity android:name=".recycler.recyclerActivity" />
+        <activity android:name=".recycler.recyclerActivity" /> <!-- foregroundService -->
+        <activity android:name=".service.ServiceActivity" />
+
+        <service
+            android:name=".service.reqService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -10,18 +10,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import md.winitech.com.Capture.CaptureActivity;
-import md.winitech.com.Lamda.LamdaActivity;
-import md.winitech.com.Parcelable.ParcelableActivity;
-import md.winitech.com.Realm.RealmActivity;
+import com.facebook.stetho.Stetho;
+
+import md.winitech.com.capture.CaptureActivity;
+import md.winitech.com.generic.GenericActivity;
+import md.winitech.com.lamda.LamdaActivity;
+import md.winitech.com.parcelable.ParcelableActivity;
+import md.winitech.com.realm.RealmActivity;
 import md.winitech.com.bindAPI.BindActivity;
 import md.winitech.com.bindAPI.ObjectActivity;
 import md.winitech.com.broadCast.BroadcastActivity;
 import md.winitech.com.butterKnife.ButterActivity;
 import md.winitech.com.databinding.ActivityMainBinding;
+import md.winitech.com.opensource.openSourceActivity;
 import md.winitech.com.pattern.ListActivity;
 import md.winitech.com.pattern.patternActivity;
 import md.winitech.com.recycler.recyclerActivity;
+import md.winitech.com.retrofit.view.RetrofitActivity;
+import md.winitech.com.service.ServiceActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setActivity(this);
         binding.txtMain.setText("Main Activity");
@@ -38,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
          * XML Broadcast Receiver
          * */
         this.sendBroadcast(new Intent("md.winitech.com.Broadcast.test"));
+
+        /**
+         * Stetho 라이브러리 (디버깅용 : 크롬에서  chrome://inspect )
+         * */
+        Stetho.initializeWithDefaults(this);
     }
 
 
@@ -88,7 +98,21 @@ public class MainActivity extends AppCompatActivity {
                 mIntent = new Intent(this, CaptureActivity.class);
                 startActivity(mIntent);
                 break;
-
+            case R.id.btn_12:
+                mIntent = new Intent(this, GenericActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_13:
+                mIntent = new Intent(this, openSourceActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_14:
+                mIntent = new Intent(this, ServiceActivity.class);
+                startActivity(mIntent);
+            case R.id.btn_15:
+                mIntent = new Intent(this, RetrofitActivity.class);
+                startActivity(mIntent);
+                break;
         }
 
     }

@@ -12,89 +12,128 @@
             type="md.winitech.com.MainActivity" />
     </data>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txt_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btn_1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/DataBinding"
-            android:onClick="@{activity::onClickButton}" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/DataBindingObject"
-            android:onClick="@{activity::onClickButton}" />
+            <TextView
+                android:id="@+id/txt_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btn_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ButterKnife"
-            android:onClick="@{activity::onClickButton}" />
+            <Button
+                android:id="@+id/btn_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/DataBinding" />
 
-        <Button
-            android:id="@+id/btn_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/RealmDataBase"
-            android:onClick="@{activity::onClickButton}" />
+            <Button
+                android:id="@+id/btn_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/DataBindingObject" />
 
-        <Button
-            android:id="@+id/btn_5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/JavaLamda"
-            android:onClick="@{activity::onClickButton}" />
+            <Button
+                android:id="@+id/btn_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/ButterKnife" />
 
-        <Button
-            android:id="@+id/btn_6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Parcelable"
-            android:onClick="@{activity::onClickButton}" />
+            <Button
+                android:id="@+id/btn_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/RealmDataBase" />
 
-        <Button
-            android:id="@+id/btn_7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Broadcast"
-            android:onClick="@{activity::onClickButton}" />
+            <Button
+                android:id="@+id/btn_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/JavaLamda" />
 
-        <Button
-            android:id="@+id/btn_8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/recyclerView"
-            android:onClick="@{activity::onClickButton}" />
+            <Button
+                android:id="@+id/btn_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/Parcelable" />
 
-        <Button
-            android:id="@+id/btn_9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/mvvmActivity"
-            android:onClick="@{activity::onClickButton}" />
+            <Button
+                android:id="@+id/btn_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/Broadcast" />
 
-        <Button
-            android:id="@+id/btn_10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/mvvmListActivity"
-            android:onClick="@{activity::onClickButton}" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btn_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/recyclerView" />
 
+            <Button
+                android:id="@+id/btn_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/mvvmActivity" />
+
+            <Button
+                android:id="@+id/btn_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/mvvmListActivity" />
+
+            <Button
+                android:id="@+id/btn_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/capture_View" />
+
+            <Button
+                android:id="@+id/btn_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/Generic" />
+
+            <Button
+                android:id="@+id/btn_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/openSource" />
+
+            <Button
+                android:id="@+id/btn_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/serviceCall" />
+
+            <Button
+                android:id="@+id/btn_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/retrofit" />
+        </LinearLayout>
+    </ScrollView>
 </layout>

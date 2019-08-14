@@ -2,10 +2,9 @@
  * Create by SangKwon on 2019. 7. 10.
  */
 
-package md.winitech.com.Lamda;
+package md.winitech.com.lamda;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import md.winitech.com.R;

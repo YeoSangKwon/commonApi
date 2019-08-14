@@ -12,16 +12,30 @@
     <string name="recyclerView">recycler view</string>
     <string name="mvvmActivity">MVVM</string>
     <string name="mvvmListActivity">MVVM List</string>
+    <string name="capture_View">Capture view</string>
+    <string name="Generic">Generic</string>
+    <string name="openSource">openSource</string>
+    <string name="serviceCall">ForegroundService</string>
+    <string name="retrofit">retrofit Service</string>
 
     <!-- Butter Knife Button -->
     <string name="fragment_1">1 View</string>
     <string name="fragment_2">2 View</string>
     <string name="View_item_1">1 View item</string>
+    <string name="capture_activity">Capture Activity</string>
+    <string name="insertButton">입력</string>
+
     <!-- Butter Knife Fragment -->
     <string name="fragment_view_1">1 Fragment View</string>
     <string name="fragment_view_2">2 Fragment View</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- message -->
+    <string name="insert_ok">현재화면을 캡쳐 했습니다.</string>
+
+    <!-- permission -->
+    <string name="please_write_externam_permission">캡쳐를 위해 저장소 권한에 동의 하셔야 합니다.</string>
 </resources>
 

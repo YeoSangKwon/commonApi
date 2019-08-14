@@ -63,7 +63,9 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
         viewHolder.onBind(listData.get(position));
 
         if (null != mListener) {
-            viewHolder.itemView.setOnClickListener(v -> mListener.onItemClicked(position));
+            viewHolder.itemView.setOnClickListener(v -> {
+                mListener.onItemClicked(position);
+            });
 
             viewHolder.itemView.setOnLongClickListener(v -> {
                 mListener.onItemLongClicked(position);

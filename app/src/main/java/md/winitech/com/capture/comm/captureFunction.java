@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 25.
  */
 
-package md.winitech.com.Capture.comm;
+package md.winitech.com.capture.comm;
 
 import android.Manifest;
 import android.app.Activity;
@@ -54,6 +54,8 @@ public class captureFunction {
                         try {
                             fos = new FileOutputStream(fileCacheItem);
                             bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+
+                            Toast.makeText(mContext, R.string.insert_ok, Toast.LENGTH_SHORT).show();
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
                         }
@@ -63,6 +65,7 @@ public class captureFunction {
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
                         Toast.makeText(mContext, R.string.please_write_externam_permission, Toast.LENGTH_SHORT).show();
+
                     }
 
                     @Override
