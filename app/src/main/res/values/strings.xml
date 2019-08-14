@@ -24,6 +24,7 @@
     <string name="View_item_1">1 View item</string>
     <string name="capture_activity">Capture Activity</string>
     <string name="insertButton">입력</string>
+    <string name="selectButton">조회</string>
 
     <!-- Butter Knife Fragment -->
     <string name="fragment_view_1">1 Fragment View</string>
@@ -35,7 +36,11 @@
     <!-- message -->
     <string name="insert_ok">현재화면을 캡쳐 했습니다.</string>
 
+    <!-- Common Button -->
+
     <!-- permission -->
     <string name="please_write_externam_permission">캡쳐를 위해 저장소 권한에 동의 하셔야 합니다.</string>
+
+
 </resources>
 

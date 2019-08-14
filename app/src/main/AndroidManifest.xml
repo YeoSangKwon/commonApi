@@ -48,10 +48,14 @@
         <activity android:name="md.ysk5898.com.recycler.recyclerActivity" /> <!-- foregroundService -->
         <activity android:name="md.ysk5898.com.service.ServiceActivity" />
 
+        <!--포그라운드 서비스-->
         <service
             android:name="md.ysk5898.com.service.reqService"
             android:enabled="true"
             android:exported="true" />
+
+        <!--FCM 설정-->
+
     </application>
 
 </manifest>
