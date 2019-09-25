@@ -100,13 +100,15 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.ViewHo
      * */
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.textView1) TextView textView1;
-        @BindView(R.id.textView2) TextView textView2;
-        @BindView(R.id.imageView) ImageView imageView;
+        TextView textView1;
+        TextView textView2;
+        ImageView imageView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            ButterKnife.bind(this,itemView);
+            textView1 = itemView.findViewById(R.id.textView1);
+            textView2 = itemView.findViewById(R.id.textView2);
+            imageView = itemView.findViewById(R.id.imageView);
         }
 
         void onBind(Data data) {

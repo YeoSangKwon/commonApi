@@ -129,11 +129,32 @@
                 android:text="@string/serviceCall" />
 
             <Button
-                android:id="@+id/btn_15"
+            android:id="@+id/btn_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{activity::onClickButton}"
+            android:text="@string/retrofit" />
+
+            <Button
+                android:id="@+id/btn_16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="@{activity::onClickButton}"
-                android:text="@string/retrofit" />
+                android:text="@string/remoteConfig" />
+
+            <Button
+                android:id="@+id/btn_17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/TechActivity" />
+
+            <Button
+                android:id="@+id/btn_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/BlueToothActivity" />
         </LinearLayout>
     </ScrollView>
 </layout>

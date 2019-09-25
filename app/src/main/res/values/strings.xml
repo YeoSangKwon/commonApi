@@ -17,6 +17,9 @@
     <string name="openSource">openSource</string>
     <string name="serviceCall">ForegroundService</string>
     <string name="retrofit">retrofit Service</string>
+    <string name="remoteConfig">Firebase Remote Config</string>
+    <string name="TechActivity">technology view</string>
+    <string name="BlueToothActivity">BlueTooth Scan</string>
 
     <!-- Butter Knife Button -->
     <string name="fragment_1">1 View</string>
@@ -38,9 +41,20 @@
 
     <!-- Common Button -->
 
+    <!-- FCM -->
+    <string name="default_notification_channel_id">message</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="msg_subscribed">Subscribed to weather topic</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to weather topic</string>
+    <string name="default_notification_channel_name" translatable="true">Weather</string>
+    <string name="fetch_remote_welcome_message">fetch remote welcome</string>
+
     <!-- permission -->
     <string name="please_write_externam_permission">캡쳐를 위해 저장소 권한에 동의 하셔야 합니다.</string>
 
+    <!-- name -->
+    <string name="name_android">Android</string>
+    <string name="name_kotlin">Kotlin</string>
 
 </resources>
 

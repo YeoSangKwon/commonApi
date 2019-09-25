@@ -8,6 +8,7 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
@@ -23,8 +24,12 @@ import md.ysk5898.com.R;
 
 public class DialogActivity extends AppCompatActivity {
 
-    @BindView(R.id.txt_1) TextView txt_1;
-    @BindView(R.id.txt_2) TextView txt_2;
+    Notification notification;
+
+    @BindView(R.id.txt_1)
+    TextView txt_1;
+    @BindView(R.id.txt_2)
+    TextView txt_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +49,15 @@ public class DialogActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            Notification notification = new NotificationCompat.Builder(this, getString(R.string.default_notification_channel_id))
-                    .setContentTitle("FCM Service")
-                    .setContentTitle(mIntent.getStringExtra("title"))
-                    .setContentText(mIntent.getStringExtra("body"))
-                    .setSmallIcon(R.drawable.check_box)
-                    .setContentIntent(pendingIntent)
-                    .build();
-
-            manager.notify(0, notification);
-        }
+        notification = new NotificationCompat.Builder(this, getString(R.string.default_notification_channel_id))
+                .setContentTitle("FCM Service")
+                .setContentTitle(mIntent.getStringExtra("title"))
+                .setContentText(mIntent.getStringExtra("body"))
+                .setSmallIcon(R.drawable.check_box)
+                .setContentIntent(pendingIntent)
+                .setVibrate(new long[]{1000,1000,1000,1000})
+                .build();
+        manager.notify(0, notification);
     }
 
     private NotificationManager createNotificationChannel() {
@@ -69,6 +72,8 @@ public class DialogActivity extends AppCompatActivity {
             );
             manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(serviceChannel);
+        } else {
+            manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         }
 
 

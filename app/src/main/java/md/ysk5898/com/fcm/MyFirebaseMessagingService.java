@@ -4,25 +4,11 @@
 
 package md.ysk5898.com.fcm;
 
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Intent;
-import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import android.app.PendingIntent;
-import android.app.AlertDialog;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
-import md.ysk5898.com.MainActivity;
-import md.ysk5898.com.R;
-
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
@@ -36,6 +22,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         // getData() 로 들어 올 경우
         if (remoteMessage.getData().size() > 0) {
             Log.e(TAG, "Message data payload: " + remoteMessage.getData());
+            sendNotification(remoteMessage.getData().get("title"), remoteMessage.getData().get("body"));
         }
 
         // getNotification() 으로 들어 올 경우

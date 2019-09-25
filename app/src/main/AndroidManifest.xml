@@ -3,11 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="md.ysk5898.com">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name="md.ysk5898.com.apiApplication"
+        android:name=".apiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,47 +19,64 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="md.ysk5898.com.retrofit.view.RetrofitActivity"></activity>
-        <activity
-            android:name="md.ysk5898.com.opensource.openSourceActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="md.ysk5898.com.generic.GenericActivity" />
-        <activity android:name="md.ysk5898.com.capture.CaptureActivity" />
-        <activity android:name="md.ysk5898.com.pattern.ListActivity" />
-        <activity android:name="md.ysk5898.com.pattern.patternActivity" />
-        <activity android:name="md.ysk5898.com.MainActivity">
+        <activity android:name="md.ysk5898.kotlin.retrofit.RetrofitKtActivity"></activity>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="OPEN_THIS_ACT" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="md.ysk5898.com.bindAPI.BindActivity" />
-        <activity android:name="md.ysk5898.com.bindAPI.base.commActivity" />
-        <activity android:name="md.ysk5898.com.bindAPI.ObjectActivity" />
-        <activity android:name="md.ysk5898.com.butterKnife.ButterActivity" />
-        <activity android:name="md.ysk5898.com.realm.RealmActivity" />
-        <activity android:name="md.ysk5898.com.lamda.LamdaActivity" />
-        <activity android:name="md.ysk5898.com.parcelable.ParcelableActivity" />
-        <activity android:name="md.ysk5898.com.parcelable.GetActivity" /> <!-- com.BroadCast.receiver -->
-        <receiver android:name="md.ysk5898.com.broadCast.receiver.XmlBroadCastReceiver">
+        <activity android:name="md.ysk5898.kotlin.MainKotlinActivity" />
+        <activity android:name=".bluetooth.BlueToothBleActivity" />
+        <activity android:name=".bluetooth.BlueToothActivity" />
+        <activity android:name=".technology.TechActivity" />
+        <activity android:name=".remote.RemoteConfigActivity" />
+        <activity
+            android:name=".fcm.DialogActivity"
+            android:theme="@style/AppThemeDialog" />
+        <activity android:name=".retrofit.view.RetrofitActivity" />
+        <activity
+            android:name=".opensource.openSourceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".generic.GenericActivity" />
+        <activity android:name=".capture.CaptureActivity" />
+        <activity android:name=".pattern.ListActivity" />
+        <activity android:name=".pattern.patternActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".bindAPI.BindActivity" />
+        <activity android:name=".bindAPI.base.commActivity" />
+        <activity android:name=".bindAPI.ObjectActivity" />
+        <activity android:name=".butterKnife.ButterActivity" />
+        <activity android:name=".realm.RealmActivity" />
+        <activity android:name=".lamda.LamdaActivity" />
+        <activity android:name=".parcelable.ParcelableActivity" />
+        <activity android:name=".parcelable.GetActivity" /> <!-- com.BroadCast.receiver -->
+        <receiver android:name=".broadCast.receiver.XmlBroadCastReceiver">
             <intent-filter>
                 <action android:name="md.ysk5898.com.Broadcast.test" />
             </intent-filter>
         </receiver>
 
-        <activity android:name="md.ysk5898.com.broadCast.BroadcastActivity" />
-        <activity android:name="md.ysk5898.com.recycler.recyclerActivity" /> <!-- foregroundService -->
-        <activity android:name="md.ysk5898.com.service.ServiceActivity" />
-
-        <!--포그라운드 서비스-->
+        <activity android:name=".broadCast.BroadcastActivity" />
+        <activity android:name=".recycler.recyclerActivity" /> <!-- foregroundService -->
+        <activity android:name=".service.ServiceActivity" /> <!-- 포그라운드 서비스 -->
         <service
-            android:name="md.ysk5898.com.service.reqService"
+            android:name=".service.reqService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true" /> <!-- FCM 설정 -->
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
-        <!--FCM 설정-->
-
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
     </application>
 
 </manifest>

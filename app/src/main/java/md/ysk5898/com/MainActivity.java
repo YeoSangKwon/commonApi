@@ -4,17 +4,11 @@
 
 package md.ysk5898.com;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.databinding.DataBindingUtil;
-import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -25,13 +19,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
-import md.ysk5898.com.bluetooth.BlueToothActivity;
 import md.ysk5898.com.bluetooth.BlueToothBleActivity;
 import md.ysk5898.com.capture.CaptureActivity;
 import md.ysk5898.com.generic.GenericActivity;
@@ -104,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    private void regeistTopic(){
+    private void regeistTopic() {
         FirebaseMessaging.getInstance().subscribeToTopic("weather")
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
