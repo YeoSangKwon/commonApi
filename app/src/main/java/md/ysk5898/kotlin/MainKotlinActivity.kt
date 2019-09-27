@@ -8,10 +8,10 @@ import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import md.ysk5898.com.R
 import md.ysk5898.com.databinding.ActivityMainKotlinBinding
+import md.ysk5898.kotlin.bluetooth.BluetoothKtActivity
 import md.ysk5898.kotlin.retrofit.RetrofitKtActivity
 
 lateinit var binding: ActivityMainKotlinBinding
@@ -31,7 +31,10 @@ class MainKotlinActivity : AppCompatActivity() {
                 var mIntent: Intent = Intent(this, RetrofitKtActivity::class.java)
                 startActivity(mIntent)
             }
-            R.id.btn_2 -> Log.e("1111", "222222")
+            R.id.btn_2 -> {
+                var mIntent: Intent = Intent(this, BluetoothKtActivity::class.java)
+                startActivity(mIntent)
+            }
         }
     }
 }
