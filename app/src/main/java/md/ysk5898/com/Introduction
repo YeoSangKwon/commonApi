@@ -35,4 +35,4 @@
 
 16. technology : 안드로이드 UI/UX 기능 모음
 
-17. kotlin : NaveActivity : Observer 패턴을 이용한 데이터 바인딩
+17. livedata : Observer 패턴을 이용한 데이터 바인딩
