@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 8.
  */
 
-package md.ysk5898.com.butterKnife;
+package md.ysk5898.com.butter;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -18,8 +18,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import md.ysk5898.com.R;
-import md.ysk5898.com.butterKnife.fragment.ButterFragmentA;
-import md.ysk5898.com.butterKnife.fragment.ButterFragmentB;
+import md.ysk5898.com.butter.fragment.ButterFragmentA;
+import md.ysk5898.com.butter.fragment.ButterFragmentB;
 
 public class ButterActivity extends AppCompatActivity implements ButterFragmentA.onReceivedData {
 

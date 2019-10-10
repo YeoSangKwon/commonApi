@@ -8,7 +8,7 @@
  * 안드로이드 플래그먼트
  */
 
-package md.ysk5898.com.butterKnife.fragment;
+package md.ysk5898.com.butter.fragment;
 
 import android.content.Context;
 import android.os.Bundle;

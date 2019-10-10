@@ -6,7 +6,7 @@
  * Create by SangKwon on 2019. 7. 8.
  */
 
-package md.ysk5898.com.butterKnife.fragment;
+package md.ysk5898.com.butter.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
