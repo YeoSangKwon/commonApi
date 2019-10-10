@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 16.
  */
 
-package md.ysk5898.com.broadCast.receiver;
+package md.ysk5898.com.broadcast.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

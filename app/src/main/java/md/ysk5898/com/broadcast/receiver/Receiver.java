@@ -2,14 +2,14 @@
  * Create by SangKwon on 2019. 7. 16.
  */
 
-package md.ysk5898.com.broadCast.receiver;
+package md.ysk5898.com.broadcast.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
-import md.ysk5898.com.broadCast.BroadcastActivity;
+import md.ysk5898.com.broadcast.BroadcastActivity;
 
 public class Receiver extends BroadcastReceiver {
     @Override

@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 16.
  */
 
-package md.ysk5898.com.broadCast;
+package md.ysk5898.com.broadcast;
 
 import android.content.BroadcastReceiver;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import md.ysk5898.com.R;
-import md.ysk5898.com.broadCast.receiver.Receiver;
+import md.ysk5898.com.broadcast.receiver.Receiver;
 
 public class BroadcastActivity extends AppCompatActivity {
 
