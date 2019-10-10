@@ -15,9 +15,10 @@ import md.ysk5898.kotlin.bluetooth.BluetoothKtActivity
 import md.ysk5898.kotlin.kakao.KakaoMapActivity
 import md.ysk5898.kotlin.retrofit.RetrofitKtActivity
 
-lateinit var binding: ActivityMainKotlinBinding
 
 class MainKotlinActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainKotlinBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,15 +30,15 @@ class MainKotlinActivity : AppCompatActivity() {
     fun onClick(v: View) {
         when (v.id) {
             R.id.btn_1 -> {
-                var mIntent: Intent = Intent(this, RetrofitKtActivity::class.java)
+                var mIntent = Intent(this, RetrofitKtActivity::class.java)
                 startActivity(mIntent)
             }
             R.id.btn_2 -> {
-                var mIntent: Intent = Intent(this, BluetoothKtActivity::class.java)
+                var mIntent = Intent(this, BluetoothKtActivity::class.java)
                 startActivity(mIntent)
             }
             R.id.btn_3 ->{
-                var mIntent: Intent = Intent(this, KakaoMapActivity::class.java)
+                var mIntent = Intent(this, KakaoMapActivity::class.java)
                 startActivity(mIntent)
             }
         }
