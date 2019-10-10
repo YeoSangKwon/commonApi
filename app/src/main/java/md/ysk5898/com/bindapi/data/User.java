@@ -2,7 +2,7 @@
  * Create by SangKwon on 2019. 7. 8.
  */
 
-package md.ysk5898.com.bindAPI.data;
+package md.ysk5898.com.bindapi.data;
 
 public class User {
 

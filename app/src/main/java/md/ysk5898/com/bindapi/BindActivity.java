@@ -8,12 +8,12 @@
  * 3. getBinding을 사용하여 바인딩된 View를 사용
  */
 
-package md.ysk5898.com.bindAPI;
+package md.ysk5898.com.bindapi;
 
 import android.os.Bundle;
 
 import md.ysk5898.com.R;
-import md.ysk5898.com.bindAPI.base.commActivity;
+import md.ysk5898.com.bindapi.base.commActivity;
 import md.ysk5898.com.databinding.ActivityBindBinding;
 
 public class BindActivity extends commActivity<ActivityBindBinding> {

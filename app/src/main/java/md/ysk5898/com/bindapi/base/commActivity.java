@@ -10,7 +10,7 @@
  *  - 공통 바인딩만을 위한 뷰로 화면은 따로 존재하지 않음
  */
 
-package md.ysk5898.com.bindAPI.base;
+package md.ysk5898.com.bindapi.base;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
