@@ -12,6 +12,7 @@ import android.view.View
 import md.ysk5898.com.R
 import md.ysk5898.com.databinding.ActivityMainKotlinBinding
 import md.ysk5898.kotlin.bluetooth.BluetoothKtActivity
+import md.ysk5898.kotlin.kakao.KakaoMapActivity
 import md.ysk5898.kotlin.retrofit.RetrofitKtActivity
 
 lateinit var binding: ActivityMainKotlinBinding
@@ -33,6 +34,10 @@ class MainKotlinActivity : AppCompatActivity() {
             }
             R.id.btn_2 -> {
                 var mIntent: Intent = Intent(this, BluetoothKtActivity::class.java)
+                startActivity(mIntent)
+            }
+            R.id.btn_3 ->{
+                var mIntent: Intent = Intent(this, KakaoMapActivity::class.java)
                 startActivity(mIntent)
             }
         }

@@ -34,3 +34,5 @@
 15. remote : remote data 를 통해 앱의 환경설정을 웹 (firebase)에서 수정하는 부분
 
 16. technology : 안드로이드 UI/UX 기능 모음
+
+17. kotlin : NaveActivity : Observer 패턴을 이용한 데이터 바인딩

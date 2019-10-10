@@ -24,6 +24,7 @@ import md.ysk5898.com.bluetooth.BlueToothBleActivity;
 import md.ysk5898.com.capture.CaptureActivity;
 import md.ysk5898.com.generic.GenericActivity;
 import md.ysk5898.com.lamda.LamdaActivity;
+import md.ysk5898.com.livedata.NameActivity;
 import md.ysk5898.com.parcelable.ParcelableActivity;
 import md.ysk5898.com.realm.RealmActivity;
 import md.ysk5898.com.bindAPI.BindActivity;
@@ -181,6 +182,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_18:
                 mIntent = new Intent(this, BlueToothBleActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_19:
+                mIntent = new Intent(this, NameActivity.class);
                 startActivity(mIntent);
                 break;
         }

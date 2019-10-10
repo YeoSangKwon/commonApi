@@ -4,6 +4,7 @@
 
 package md.ysk5898.com.recycler;
 
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.widget.Toast;
 
 import md.ysk5898.com.R;
+import md.ysk5898.com.databinding.ActivityRecyclerBinding;
 import md.ysk5898.com.recycler.adapter.recyclerAdapter;
 import md.ysk5898.com.recycler.data.Data;
 
@@ -18,10 +20,14 @@ public class recyclerActivity extends AppCompatActivity implements recyclerAdapt
 
     private recyclerAdapter adapter;
 
+    ActivityRecyclerBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycler);
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler);
+        binding.setActivity(this);
 
         init();
         dataSet();
@@ -31,13 +37,13 @@ public class recyclerActivity extends AppCompatActivity implements recyclerAdapt
      * 뷰 초기셋팅
      * */
     public void init(){
-        RecyclerView recyclerView = findViewById(R.id.my_recycler_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(linearLayoutManager);
         adapter = new recyclerAdapter();
         //어뎁터에서 선언한 인터페이스를 현재 뷰에 있는 Override 된 함수로 연결
         adapter.setOnClickListener(this);
-        recyclerView.setAdapter(adapter);
+
+        binding.myRecyclerView.setLayoutManager(linearLayoutManager);
+        binding.myRecyclerView.setAdapter(adapter);
     }
 
     /**
