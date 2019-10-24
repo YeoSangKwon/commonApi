@@ -26,11 +26,6 @@ public class DialogActivity extends AppCompatActivity {
 
     Notification notification;
 
-    @BindView(R.id.txt_1)
-    TextView txt_1;
-    @BindView(R.id.txt_2)
-    TextView txt_2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +35,9 @@ public class DialogActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Intent mIntent = getIntent();
+
+        TextView txt_1 = findViewById(R.id.txt_1);
+        TextView txt_2 = findViewById(R.id.txt_2);
 
         txt_1.setText(mIntent.getStringExtra("title"));
         txt_2.setText(mIntent.getStringExtra("body"));

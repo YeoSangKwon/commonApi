@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import md.ysk5898.com.R;
-import md.ysk5898.com.bindAPI.base.commActivity;
+import md.ysk5898.com.bindapi.base.commActivity;
 import md.ysk5898.com.databinding.ActivityLamdaBinding;
 
 public class LamdaActivity extends commActivity <ActivityLamdaBinding> {

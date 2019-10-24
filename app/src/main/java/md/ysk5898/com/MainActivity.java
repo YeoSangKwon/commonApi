@@ -25,12 +25,13 @@ import md.ysk5898.com.capture.CaptureActivity;
 import md.ysk5898.com.generic.GenericActivity;
 import md.ysk5898.com.lamda.LamdaActivity;
 import md.ysk5898.com.livedata.NameActivity;
+import md.ysk5898.com.material.MaterialActivity;
 import md.ysk5898.com.parcelable.ParcelableActivity;
 import md.ysk5898.com.realm.RealmActivity;
-import md.ysk5898.com.bindAPI.BindActivity;
-import md.ysk5898.com.bindAPI.ObjectActivity;
-import md.ysk5898.com.broadCast.BroadcastActivity;
-import md.ysk5898.com.butterKnife.ButterActivity;
+import md.ysk5898.com.bindapi.BindActivity;
+import md.ysk5898.com.bindapi.ObjectActivity;
+import md.ysk5898.com.broadcast.BroadcastActivity;
+import md.ysk5898.com.butter.ButterActivity;
 import md.ysk5898.com.databinding.ActivityMainBinding;
 import md.ysk5898.com.opensource.openSourceActivity;
 import md.ysk5898.com.pattern.ListActivity;
@@ -186,6 +187,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_19:
                 mIntent = new Intent(this, NameActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_20:
+                mIntent = new Intent(this, MaterialActivity.class);
                 startActivity(mIntent);
                 break;
         }

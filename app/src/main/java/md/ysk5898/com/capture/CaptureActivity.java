@@ -20,8 +20,6 @@ public class CaptureActivity extends AppCompatActivity {
 
     Context mContext;
 
-    @BindView(R.id.btn_1) Button btn_1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

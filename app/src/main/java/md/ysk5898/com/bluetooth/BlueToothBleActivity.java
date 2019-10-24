@@ -5,11 +5,13 @@
 package md.ysk5898.com.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,8 +25,11 @@ import md.ysk5898.com.R;
 public class BlueToothBleActivity extends AppCompatActivity {
 
     private static final String TAG = "BlueToothBleActivity";
+    private static final int REQUEST_ENABLE_BT = 100;
     BluetoothAdapter mBluetoothAdapter;
     BluetoothLeScanner mBluetoothLeScanner;
+    BluetoothManager bluetoothManager;
+    BluetoothGatt bluetoothGatt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +37,17 @@ public class BlueToothBleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_blue_tooth_ble);
 
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
         mBluetoothLeScanner = mBluetoothAdapter.getBluetoothLeScanner();
+        bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
 
         if(!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)){
             Toast.makeText(this, "Not Supported BLE", Toast.LENGTH_SHORT).show();
             finish();
         }
 
-        if(null == mBluetoothAdapter){
-            Toast.makeText(this, "Not Supported BlueTooth", Toast.LENGTH_SHORT).show();
-            finish();
+        if (mBluetoothAdapter == null || !mBluetoothAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
         }
 
         if(!mBluetoothAdapter.isEnabled()){

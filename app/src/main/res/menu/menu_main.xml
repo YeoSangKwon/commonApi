@@ -11,4 +11,11 @@
         android:orderInCategory="100"
         android:title="Settings"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="100"
+        android:icon="@drawable/toolbar_img"
+        android:title=""
+        app:showAsAction="ifRoom"/>
 </menu>

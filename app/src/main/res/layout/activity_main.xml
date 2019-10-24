@@ -155,6 +155,20 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{activity::onClickButton}"
                 android:text="@string/BlueToothActivity" />
+
+            <Button
+                android:id="@+id/btn_19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/livedata" />
+
+            <Button
+                android:id="@+id/btn_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::onClickButton}"
+                android:text="@string/Material" />
         </LinearLayout>
     </ScrollView>
 </layout>

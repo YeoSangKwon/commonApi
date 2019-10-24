@@ -11,6 +11,7 @@ import android.os.Bundle
 import android.view.View
 import md.ysk5898.com.databinding.ActivitySplashBinding
 import md.ysk5898.kotlin.MainKotlinActivity
+import md.ysk5898.quiz.QuizActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -30,6 +31,8 @@ class SplashActivity : AppCompatActivity() {
             mIntent = Intent(this, MainActivity::class.java)
         }else if(v.id == R.id.btn_kotlin){
             mIntent = Intent(this, MainKotlinActivity::class.java)
+        }else if(v.id == R.id.btn_quiz){
+            mIntent = Intent(this, QuizActivity::class.java)
         }
         startActivity(mIntent)
     }

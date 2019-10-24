@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".apiApplication"
@@ -19,7 +20,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="md.ysk5898.kotlin.retrofit.RetrofitKtActivity"></activity>
+        <activity
+            android:name=".material.MaterialActivity"/>
+        <activity android:name="md.ysk5898.quiz.QuizActivity" />
+        <activity
+            android:name="md.ysk5898.kotlin.paracelable.GetActivityKt"
+            android:theme="@style/Theme.AppCompat.Dialog.Alert" />
+        <activity android:name="md.ysk5898.kotlin.paracelable.ParcelableActivityKt" />
+        <activity android:name=".livedata.NameActivity" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="823479d530970972f95d7c12cb2ee460" />
+
+        <activity android:name="md.ysk5898.kotlin.kakao.KakaoMapActivity" />
+        <activity android:name="md.ysk5898.kotlin.bluetooth.BluetoothKtActivity" />
+        <activity android:name="md.ysk5898.kotlin.retrofit.RetrofitKtActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,21 +61,21 @@
         <activity android:name=".pattern.ListActivity" />
         <activity android:name=".pattern.patternActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".bindAPI.BindActivity" />
-        <activity android:name=".bindAPI.base.commActivity" />
-        <activity android:name=".bindAPI.ObjectActivity" />
-        <activity android:name=".butterKnife.ButterActivity" />
+        <activity android:name=".bindapi.BindActivity" />
+        <activity android:name=".bindapi.base.commActivity" />
+        <activity android:name=".bindapi.ObjectActivity" />
+        <activity android:name=".butter.ButterActivity" />
         <activity android:name=".realm.RealmActivity" />
         <activity android:name=".lamda.LamdaActivity" />
         <activity android:name=".parcelable.ParcelableActivity" />
         <activity android:name=".parcelable.GetActivity" /> <!-- com.BroadCast.receiver -->
-        <receiver android:name=".broadCast.receiver.XmlBroadCastReceiver">
+        <receiver android:name=".broadcast.receiver.XmlBroadCastReceiver">
             <intent-filter>
                 <action android:name="md.ysk5898.com.Broadcast.test" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".broadCast.BroadcastActivity" />
+        <activity android:name=".broadcast.BroadcastActivity" />
         <activity android:name=".recycler.recyclerActivity" /> <!-- foregroundService -->
         <activity android:name=".service.ServiceActivity" /> <!-- 포그라운드 서비스 -->
         <service
