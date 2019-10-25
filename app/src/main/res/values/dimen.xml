@@ -7,5 +7,12 @@
     <dimen name="edt_Margin">8dp</dimen>
     <dimen name="activity_horizontal_margin">0dp</dimen>
     <dimen name="activity_vertical_margin">0dp</dimen>
+
+    <dimen name="layout_margin">16dp</dimen>
+    <dimen name="layout_margin_half">8dp</dimen>
+    <dimen name="layout_margin_content">24dp</dimen>
+    <dimen name="layout_margin_double">32dp</dimen>
+
     <dimen name="header_height">192dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
 </resources>

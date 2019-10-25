@@ -21,7 +21,17 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".material.MaterialActivity"/>
+            android:name=".pip.PipActivity"
+            android:taskAffinity = ".pip.PipActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:allowTaskReparenting="true"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:configChanges= "screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"/>
+        <activity android:name=".material.MaterialActivity" />
         <activity android:name="md.ysk5898.quiz.QuizActivity" />
         <activity
             android:name="md.ysk5898.kotlin.paracelable.GetActivityKt"

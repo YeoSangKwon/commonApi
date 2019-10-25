@@ -27,6 +27,7 @@ import md.ysk5898.com.lamda.LamdaActivity;
 import md.ysk5898.com.livedata.NameActivity;
 import md.ysk5898.com.material.MaterialActivity;
 import md.ysk5898.com.parcelable.ParcelableActivity;
+import md.ysk5898.com.pip.PipActivity;
 import md.ysk5898.com.realm.RealmActivity;
 import md.ysk5898.com.bindapi.BindActivity;
 import md.ysk5898.com.bindapi.ObjectActivity;
@@ -191,6 +192,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_20:
                 mIntent = new Intent(this, MaterialActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btn_21:
+                mIntent = new Intent(this, PipActivity.class);
                 startActivity(mIntent);
                 break;
         }

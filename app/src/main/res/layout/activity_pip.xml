@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Create by SangKwon on 2019. 10. 25.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="md.ysk5898.com.pip.PipActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".pip.PipActivity">
+
+
+        <md.ysk5898.com.pip.widget.MovieView
+            android:id="@+id/movie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:src="@raw/vid_bigbuckbunny"
+            android:title="@string/title_bigbuckbunny"/>
+
+        <FrameLayout
+            android:id="@+id/frame_mock_player"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:background="@color/colorAccent">
+
+            <ImageButton
+                android:id="@+id/btn_minimize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="@dimen/layout_margin"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_picture_in_picture_alt_black_24dp"
+                android:onClick="@{activity::onClick}"
+                android:tint="@android:color/white" />
+
+            <!--Other Player UI here-->
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>
