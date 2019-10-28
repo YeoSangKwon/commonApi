@@ -2,6 +2,8 @@
     <string name="app_name">commomAPI</string>
 
     <!-- Main menu -->
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
     <string name="DataBinding">DataBinding</string>
     <string name="DataBindingObject">DataBinding Object</string>
     <string name="ButterKnife">Butter Knife</string>

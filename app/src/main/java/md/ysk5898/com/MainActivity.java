@@ -6,7 +6,11 @@ package md.ysk5898.com;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.net.Uri;
+import android.os.Build;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,6 +44,7 @@ import md.ysk5898.com.pattern.patternActivity;
 import md.ysk5898.com.recycler.recyclerActivity;
 import md.ysk5898.com.remote.RemoteConfigActivity;
 import md.ysk5898.com.retrofit.view.RetrofitActivity;
+import md.ysk5898.com.service.AlwaysTopService;
 import md.ysk5898.com.service.ServiceActivity;
 import md.ysk5898.com.technology.TechActivity;
 
@@ -111,9 +116,54 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        startService();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        stopService();
+    }
+
+    public void startService() {
+        if (!Settings.canDrawOverlays(this)) {
+            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,Uri.parse("package:" + getPackageName()));
+            startActivityForResult(intent, 3000);
+        } else {
+            Intent serviceIntent = new Intent(this, AlwaysTopService.class);
+            serviceIntent.putExtra("inputExtra", "Foreground Service Test");
+            ContextCompat.startForegroundService(this, serviceIntent);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 3000) {
+            Intent serviceIntent = new Intent(this, AlwaysTopService.class);
+            serviceIntent.putExtra("inputExtra", "Foreground Service Test");
+            ContextCompat.startForegroundService(this, serviceIntent);
+
+        }
+    }
+
+    public void stopService() {
+        Intent serviceIntent = new Intent(this, AlwaysTopService.class);
+        stopService(serviceIntent);
+    }
+
     public void onClickButton(View view) {
         Intent mIntent;
         switch (view.getId()) {
+            case R.id.btn_start:
+                startService();
+                break;
+            case R.id.btn_end:
+                stopService();
+                break;
             case R.id.btn_1:
                 mIntent = new Intent(this, BindActivity.class);
                 startActivity(mIntent);

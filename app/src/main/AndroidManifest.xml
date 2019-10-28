@@ -11,6 +11,9 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <!-- 화면위에 항상 띄워 둘 뷰를 위한 권한  -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
         android:name=".apiApplication"
         android:allowBackup="true"
@@ -22,15 +25,15 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".pip.PipActivity"
-            android:taskAffinity = ".pip.PipActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:autoRemoveFromRecents="true"
-            android:excludeFromRecents="true"
             android:allowTaskReparenting="true"
+            android:autoRemoveFromRecents="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
             android:resizeableActivity="true"
             android:supportsPictureInPicture="true"
-            android:configChanges= "screenSize|smallestScreenSize|screenLayout|orientation"
-            android:launchMode="singleTask"/>
+            android:taskAffinity=".pip.PipActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".material.MaterialActivity" />
         <activity android:name="md.ysk5898.quiz.QuizActivity" />
         <activity
@@ -99,6 +102,11 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <service
+            android:name=".service.AlwaysTopService"
+            android:enabled="true"
+            android:permission="android.permission.SYSTEM_ALERT_WINDOW" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
