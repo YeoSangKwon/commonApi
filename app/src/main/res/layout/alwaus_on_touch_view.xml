@@ -18,6 +18,14 @@
         android:layout_height="180dp"
         android:src="@drawable/header_background" />
 
+    <md.ysk5898.com.pip.widget.MovieView
+        android:id="@+id/movie"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:adjustViewBounds="true"
+        android:src="@raw/vid_bigbuckbunny"
+        android:title="@string/title_bigbuckbunny"/>
+
     <Button
         android:id="@+id/btn_test"
         android:layout_width="match_parent"

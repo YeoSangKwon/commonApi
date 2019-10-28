@@ -30,6 +30,7 @@ import android.widget.Toast;
 
 import md.ysk5898.com.MainActivity;
 import md.ysk5898.com.R;
+import md.ysk5898.com.pip.widget.MovieView;
 
 public class AlwaysTopService extends Service {
     public static final String CHANNEL_ID = "ForegroundServiceChannel";
@@ -38,6 +39,10 @@ public class AlwaysTopService extends Service {
     private WindowManager windowManager;
     WindowManager.LayoutParams params;
     private Handler mHandler;
+
+    /* LayoutInflater 내부 동작 */
+    MovieView movieView;
+    Button btn_test;
 
     @Nullable
     @Override
@@ -53,7 +58,10 @@ public class AlwaysTopService extends Service {
         LayoutInflater mInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mView = mInflater.inflate(R.layout.alwaus_on_touch_view, null);
         mView.setOnTouchListener(mOnTouchListener);
+        movieView = mView.findViewById(R.id.movie);
         Button btn_test = mView.findViewById(R.id.btn_test);
+        movieView.play();
+
         btn_test.setOnClickListener(v -> Log.e("AlwaysTopService", "btn_test.setOnClickListener"));
 
         try {
